@@ -1,0 +1,940 @@
+{
+	"info": {
+		"_postman_id": "06cc228a-a399-4916-b537-198191c94f22",
+		"name": "XML Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "LOGIN",
+			"item": [
+				{
+					"name": "Test with valid email peterstosin556@gmail.com",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									" const jsonData = pm.response.json();\r",
+									"\r",
+									"//Test with valid email \"peterstosin556@gmail.com\"\r",
+									"\r",
+									"pm.test(\"Enter valid email\", function () {\r",
+									"   \r",
+									"    pm.expect(jsonData.email).to.eql(\"peterstosin556@gmail.com\");\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"peterstosin556@gmail.com\",\r\n  \"password\": \"tosinayoola\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/login",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Test with valid email address \"jic@gmail.com\"",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									" const jsonData = pm.response.json();\r",
+									"\r",
+									" //Test with valid email address \"jic@gmail.com\"\r",
+									"\r",
+									"pm.test(\"Enter valid email \", function () {\r",
+									"   \r",
+									"    pm.expect(jsonData.email).to.eql(\"jic@gmail.com\");\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"jic@gmail.com\",\r\n  \"password\": \"vicanthony\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/login",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Test with valid mail address Josh@gmail.com",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									" const jsonData = pm.response.json();\r",
+									" \r",
+									" //Test with valid mail address Josh@gmail.com\r",
+									" \r",
+									"pm.test(\"Enter valid email \", function () {\r",
+									"   \r",
+									"    pm.expect(jsonData.email).to.eql(\"Josh@gmail.com\");\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"Josh@gmail.com\",\r\n  \"password\": \"joshjordan\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/login",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Test with another mail address",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"omoola001@gmail.com\",\r\n  \"password\": \"hhhgyuu\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/login",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Test with no email address",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									" const jsonData = pm.response.json();\r",
+									"\r",
+									"// Test with no email address\r",
+									"\r",
+									"pm.test(\"Enter only password\", function () {\r",
+									"   \r",
+									"    pm.expect(jsonData.errors.Email[0]).to.eql(\"Invalid Email Address\");\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"\",\r\n  \"password\": \"777yhhh\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/login",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Test with no mail and password",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									" const jsonData = pm.response.json();\r",
+									"\r",
+									"//Test with no mail and password\r",
+									"\r",
+									"pm.test(\"Enter valid email\", function () {\r",
+									"   \r",
+									"    pm.expect(jsonData.errors.Email[0]).to.eql(\"Invalid Email Address\");\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"\",\r\n  \"password\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/login",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Test with only valid email",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									" const jsonData = pm.response.json();\r",
+									"\r",
+									"//Test with only valid email \"peterstosin556@gmail.com\"\r",
+									"\r",
+									"pm.test(\"Enter valid email with no password\", function () {\r",
+									"   \r",
+									"    pm.expect(jsonData.email).to.eql(\"peterstosin556@gmail.com\");\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"peterstosin556@gmail.com\",\r\n  \"password\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/login",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Invalid Password",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									" const jsonData = pm.response.json();\r",
+									"\r",
+									"//Test with valid email \"peterstosin556@gmail.com\"\r",
+									"\r",
+									"pm.test(\"Enter valid email\", function () {\r",
+									"   \r",
+									"    pm.expect(jsonData.email).to.eql(\"peterstosin556@gmail.com\");\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"peterstosin556@gmail.com\",\r\n  \"password\": \"tosoola\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/login",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All  Customer",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Get Customer}}",
+							"host": [
+								"{{Get Customer}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Customer",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									" const jsonData = pm.response.json();\r",
+									"\r",
+									"//Transfer more to more than one account balance\"\r",
+									"\r",
+									"pm.test(\"Fund Account\", function () {\r",
+									"   \r",
+									"    pm.expect(jsonData.email).to.eql(\"omoola1@gmail.com\");\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"firstName\": \"Mumin\",\r\n  \"lastName\": \"Olabiyi\",\r\n  \"address\": \"Wema Bank\",\r\n  \"phoneNumber\": \"08061678207\",\r\n  \"email\": \"omoola1@gmail.com\",\r\n  \"password\": \"wemabank\",\r\n  \"confirmPassword\": \"wemabank\",\r\n  \"accountType\": \"Savings\",\r\n  \"transactionPin\": \"2222\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/register",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login user created",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									" const jsonData = pm.response.json();\r",
+									" \r",
+									" //Test with valid mail address omoola1@gmail.com\r",
+									" \r",
+									"pm.test(\"Enter valid email \", function () {\r",
+									"   \r",
+									"    pm.expect(jsonData.email).to.eql(\"omoola1@gmail.com\");\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"omoola1@gmail.com\",\r\n  \"password\": \"wemabank\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/login",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login with Invalid Mail",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									" const jsonData = pm.response.json();\r",
+									" \r",
+									" //Test with invalid email\r",
+									" \r",
+									"pm.test(\"Enter valid email \", function () {\r",
+									"   \r",
+									"    pm.expect(jsonData.email).to.eql(\"omoola001@gmail.com\");\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"omoola001@gmail.com\",\r\n  \"password\": \"wemabank\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/login",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "TRANSFER",
+			"item": [
+				{
+					"name": "Transfer to a Beneficiary",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									" const jsonData = pm.response.json();\r",
+									"\r",
+									"//Transfer money to a beneficiary\"\r",
+									"\r",
+									"pm.test(\"Transfer money to a beneficiary\", function () {\r",
+									"   \r",
+									"    pm.expect(jsonData.message).to.eql(\"Recipients can't be less than 2\");\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"senderAccount\": \"3628243467\",\r\n  \"accountPin\": \"1234\",\r\n  \"transfers\": [\r\n    {\r\n      \"transactionAmount\": 1000,\r\n      \"receiverAccount\": \"4541686572\",\r\n      \"bank\": \"UBA\"\r\n    }\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Transfer}}/Transaction/make_transfer",
+							"host": [
+								"{{Transfer}}"
+							],
+							"path": [
+								"Transaction",
+								"make_transfer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Transfer to 10 beneficiary",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									" const jsonData = pm.response.json();\r",
+									"\r",
+									"//Transfer to 10 beneficary\"\r",
+									"\r",
+									"pm.test(\"Transfer to 10 beneficiary\", function () {\r",
+									"   \r",
+									"    pm.expect(jsonData.message).to.eql(\"Transaction processed successfully\");\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"senderAccount\": \"5786443687\",\r\n  \"accountPin\": \"2222\",\r\n  \"transfers\": [\r\n    {\r\n      \"transactionAmount\": 1000,\r\n      \"receiverAccount\": \"5438175257\",\r\n      \"bank\": \"Stanbic IBTC\"\r\n    },\r\n        {\r\n      \"transactionAmount\": 1000,\r\n      \"receiverAccount\": \"5241866312\",\r\n      \"bank\": \"Wema Bank\"\r\n    },\r\n    {\r\n      \"transactionAmount\": 1000,\r\n      \"receiverAccount\": \"4282826625\",\r\n      \"bank\": \"Wema Bank\"\r\n    },\r\n        {\r\n      \"transactionAmount\": 1000,\r\n      \"receiverAccount\": \"6746552312\",\r\n      \"bank\": \"Zenith Bank\"\r\n    },\r\n    {\r\n      \"transactionAmount\": 1000,\r\n      \"receiverAccount\": \"5752556663\",\r\n      \"bank\": \"UBA\"\r\n    },\r\n        {\r\n      \"transactionAmount\": 1000,\r\n      \"receiverAccount\": \"5127372474\",\r\n      \"bank\": \"Access Bank\"\r\n    },\r\n    {\r\n      \"transactionAmount\": 1000,\r\n      \"receiverAccount\": \"3426724816\",\r\n      \"bank\": \".Access Bank\"\r\n    },\r\n        {\r\n      \"transactionAmount\": 1000,\r\n      \"receiverAccount\": \"6878621372\",\r\n      \"bank\": \"Zenith Bank\"\r\n    },\r\n    {\r\n      \"transactionAmount\": 1000,\r\n      \"receiverAccount\": \"6368345373\",\r\n      \"bank\": \"FCMB\"\r\n    },\r\n     {\r\n      \"transactionAmount\": 1000,\r\n      \"receiverAccount\": \"1166577427\",\r\n      \"bank\": \"GTB\"\r\n    }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Transfer}}/Transaction/make_transfer",
+							"host": [
+								"{{Transfer}}"
+							],
+							"path": [
+								"Transaction",
+								"make_transfer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Test Transfer with Incorrect Pin",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									" const jsonData = pm.response.json();\r",
+									"\r",
+									"//Transfer money to a beneficiary\"\r",
+									"\r",
+									"pm.test(\"Transfer money to a beneficiary\", function () {\r",
+									"   \r",
+									"    pm.expect(jsonData.Message).to.eql(\"Invalid Pin\");\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"senderAccount\": \"5786443687\",\r\n  \"accountPin\": \"1234\",\r\n  \"transfers\": [\r\n    {\r\n      \"transactionAmount\": 1000,\r\n      \"receiverAccount\": \"4555283165\",\r\n      \"bank\": \"Wema Bank\"\r\n    },\r\n     {\r\n      \"transactionAmount\": 1000,\r\n      \"receiverAccount\": \"4282826625\",\r\n      \"bank\": \"Wema Bank\"\r\n    }\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Transfer}}/Transaction/make_transfer",
+							"host": [
+								"{{Transfer}}"
+							],
+							"path": [
+								"Transaction",
+								"make_transfer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Transfer to 2 beneficiary",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									" const jsonData = pm.response.json();\r",
+									"\r",
+									"//Transfer money TWO beneficiary\"\r",
+									"\r",
+									"pm.test(\"Transfer money to two beneficiary\", function () {\r",
+									"   \r",
+									"    pm.expect(jsonData.message).to.eql(\"Transaction processed successfully\");\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"senderAccount\": \"5786443687\",\r\n  \"accountPin\": \"2222\",\r\n  \"groupName\": \"BIT\",\r\n  \"transfers\": [\r\n    {\r\n      \"transactionAmount\": 1000,\r\n      \"receiverAccount\": \"6368345373\",\r\n      \"bank\": \"FCMB\"\r\n    },\r\n      {\r\n      \"transactionAmount\": 1000,\r\n      \"receiverAccount\": \"1166577427\",\r\n      \"bank\": \"GTB\"\r\n    }\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Transfer}}/Transaction/make_transfer",
+							"host": [
+								"{{Transfer}}"
+							],
+							"path": [
+								"Transaction",
+								"make_transfer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Negative fund transfer",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									" const jsonData = pm.response.json();\r",
+									"\r",
+									"//Transfer negative fund\"\r",
+									"\r",
+									"pm.test(\"Transfer negative fund\", function () {\r",
+									"   \r",
+									"    pm.expect(jsonData.message).to.eql(\"Amount cannot be  negative\");\r",
+									"});\r",
+									"\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"senderAccount\": \"5786443687\",\r\n  \"accountPin\": \"1234\",\r\n  \"transfers\": [\r\n    {\r\n      \"transactionAmount\": -1000,\r\n      \"receiverAccount\": \"4555283165\",\r\n      \"bank\": \"Wema Bank\"\r\n    },\r\n     {\r\n      \"transactionAmount\": -1000,\r\n      \"receiverAccount\": \"4282826625\",\r\n      \"bank\": \"Wema Bank\"\r\n    }\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Transfer}}/Transaction/make_transfer",
+							"host": [
+								"{{Transfer}}"
+							],
+							"path": [
+								"Transaction",
+								"make_transfer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Transfer to More tha 11",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									" const jsonData = pm.response.json();\r",
+									"\r",
+									"//Transfer to 10 beneficary\"\r",
+									"\r",
+									"pm.test(\"Transfer to 10 beneficiary\", function () {\r",
+									"   \r",
+									"    pm.expect(jsonData.message).to.eql(\"Transaction processed successfully\");\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"senderAccount\": \"5786443687\",\r\n  \"accountPin\": \"2222\",\r\n  \"transfers\": [\r\n    {\r\n      \"transactionAmount\": 1000,\r\n      \"receiverAccount\": \"5438175257\",\r\n      \"bank\": \"Stanbic IBTC\"\r\n    },\r\n        {\r\n      \"transactionAmount\": 1000,\r\n      \"receiverAccount\": \"5241866312\",\r\n      \"bank\": \"Wema Bank\"\r\n    },\r\n    {\r\n      \"transactionAmount\": 1000,\r\n      \"receiverAccount\": \"4282826625\",\r\n      \"bank\": \"Wema Bank\"\r\n    },\r\n        {\r\n      \"transactionAmount\": 1000,\r\n      \"receiverAccount\": \"6746552312\",\r\n      \"bank\": \"Zenith Bank\"\r\n    },\r\n    {\r\n      \"transactionAmount\": 1000,\r\n      \"receiverAccount\": \"5752556663\",\r\n      \"bank\": \"UBA\"\r\n    },\r\n        {\r\n      \"transactionAmount\": 1000,\r\n      \"receiverAccount\": \"5127372474\",\r\n      \"bank\": \"Access Bank\"\r\n    },\r\n    {\r\n      \"transactionAmount\": 1000,\r\n      \"receiverAccount\": \"3426724816\",\r\n      \"bank\": \".Access Bank\"\r\n    },\r\n        {\r\n      \"transactionAmount\": 1000,\r\n      \"receiverAccount\": \"6878621372\",\r\n      \"bank\": \"Zenith Bank\"\r\n    },\r\n    {\r\n      \"transactionAmount\": 1000,\r\n      \"receiverAccount\": \"6368345373\",\r\n      \"bank\": \"FCMB\"\r\n    },\r\n     {\r\n      \"transactionAmount\": 1000,\r\n      \"receiverAccount\": \"1166577427\",\r\n      \"bank\": \"GTB\"\r\n    },\r\n     {\r\n      \"transactionAmount\": 1000,\r\n      \"receiverAccount\": \"4555283165\",\r\n      \"bank\": \"Wema Bank\"\r\n    }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Transfer}}/Transaction/make_transfer",
+							"host": [
+								"{{Transfer}}"
+							],
+							"path": [
+								"Transaction",
+								"make_transfer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FundAccount",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									" const jsonData = pm.response.json();\r",
+									"\r",
+									"//Transfer more to more than one account balance\"\r",
+									"\r",
+									"pm.test(\"Fund Account\", function () {\r",
+									"   \r",
+									"    pm.expect(jsonData.receiverAccount).to.eql(\"5786443687\");\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"transactionAmount\": 40000,\r\n  \"narration\": \"savings\",\r\n  \"depositor\": \"self\",\r\n  \"receiverAccount\": \"5786443687\",\r\n  \"receiverBank\": \"Wema Bank\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Transfer}}/Transaction/fund_account",
+							"host": [
+								"{{Transfer}}"
+							],
+							"path": [
+								"Transaction",
+								"fund_account"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Validate Account details with Account Number",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									" const jsonData = pm.response.json();\r",
+									"\r",
+									"//Validate Account details with Account Number\"\r",
+									"\r",
+									"pm.test(\"Validate Customer details\", function () {\r",
+									"   \r",
+									"    pm.expect(jsonData.customerName).to.eql(\"Josh Jordan\");\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"bank\": \"Access Bank\",\r\n  \"accountNumber\": \"3832552358\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Transfer}}/Transaction/find_account",
+							"host": [
+								"{{Transfer}}"
+							],
+							"path": [
+								"Transaction",
+								"find_account"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "https://xmtapi.azurewebsites.net/customers"
+		},
+		{
+			"key": "Transfer",
+			"value": "https://xmtapi.azurewebsites.net"
+		}
+	]
+}
