@@ -147,20 +147,6 @@
 					"response": []
 				},
 				{
-					"name": "Get All  Customer",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{Get Customer}}",
-							"host": [
-								"{{Get Customer}}"
-							]
-						}
-					},
-					"response": []
-				},
-				{
 					"name": "Login user created",
 					"event": [
 						{
