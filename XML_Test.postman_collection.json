@@ -161,43 +161,6 @@
 					"response": []
 				},
 				{
-					"name": "Create Customer",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"exec": [
-									""
-								],
-								"type": "text/javascript"
-							}
-						}
-					],
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n  \"firstName\": \"Mumin\",\r\n  \"lastName\": \"Olabiyi\",\r\n  \"address\": \"Wema Bank\",\r\n  \"phoneNumber\": \"08061678207\",\r\n  \"email\": \"omoola1@gmail.com\",\r\n  \"password\": \"wemabank\",\r\n  \"confirmPassword\": \"wemabank\",\r\n  \"accountType\": \"Savings\",\r\n  \"transactionPin\": \"2222\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{baseUrl}}/register",
-							"host": [
-								"{{baseUrl}}"
-							],
-							"path": [
-								"register"
-							]
-						}
-					},
-					"response": []
-				},
-				{
 					"name": "Login user created",
 					"event": [
 						{
@@ -225,55 +188,6 @@
 						"body": {
 							"mode": "raw",
 							"raw": "{\r\n  \"email\": \"omoola1@gmail.com\",\r\n  \"password\": \"wemabank\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{baseUrl}}/login",
-							"host": [
-								"{{baseUrl}}"
-							],
-							"path": [
-								"login"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Login with Invalid Mail",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"exec": [
-									" const jsonData = pm.response.json();\r",
-									" \r",
-									" //Test with invalid email\r",
-									" \r",
-									"pm.test(\"Enter valid email \", function () {\r",
-									"   \r",
-									"    pm.expect(jsonData.email).to.eql(\"omoola001@gmail.com\");\r",
-									"});\r",
-									"\r",
-									""
-								],
-								"type": "text/javascript"
-							}
-						}
-					],
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n  \"email\": \"omoola001@gmail.com\",\r\n  \"password\": \"wemabank\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
