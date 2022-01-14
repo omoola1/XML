@@ -198,6 +198,53 @@
 			"name": "TRANSFER",
 			"item": [
 				{
+					"name": "FundAccount",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									" const jsonData = pm.response.json();\r",
+									"\r",
+									"//Transfer more to more than one account balance\"\r",
+									"\r",
+									"pm.test(\"Fund Account\", function () {\r",
+									"   \r",
+									"    pm.expect(jsonData.receiverAccount).to.eql(\"5786443687\");\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"transactionAmount\": 10000,\r\n  \"narration\": \"savings\",\r\n  \"depositor\": \"self\",\r\n  \"receiverAccount\": \"5786443687\",\r\n  \"receiverBank\": \"Wema Bank\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Transfer}}/Transaction/fund_account",
+							"host": [
+								"{{Transfer}}"
+							],
+							"path": [
+								"Transaction",
+								"fund_account"
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "Transfer to 10 beneficiary",
 					"event": [
 						{
@@ -304,7 +351,7 @@
 									"\r",
 									"pm.test(\"Transfer to 10 beneficiary\", function () {\r",
 									"   \r",
-									"    pm.expect(jsonData.message).to.eql(\"Transaction processed successfully\");\r",
+									"      pm.expect(jsonData.message).to.eql(\"Transaction processed successfully\");\r",
 									"});\r",
 									"\r",
 									""
@@ -333,53 +380,6 @@
 							"path": [
 								"Transaction",
 								"make_transfer"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "FundAccount",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"exec": [
-									" const jsonData = pm.response.json();\r",
-									"\r",
-									"//Transfer more to more than one account balance\"\r",
-									"\r",
-									"pm.test(\"Fund Account\", function () {\r",
-									"   \r",
-									"    pm.expect(jsonData.receiverAccount).to.eql(\"5786443687\");\r",
-									"});\r",
-									"\r",
-									""
-								],
-								"type": "text/javascript"
-							}
-						}
-					],
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n  \"transactionAmount\": 1000,\r\n  \"narration\": \"savings\",\r\n  \"depositor\": \"self\",\r\n  \"receiverAccount\": \"5786443687\",\r\n  \"receiverBank\": \"Wema Bank\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{Transfer}}/Transaction/fund_account",
-							"host": [
-								"{{Transfer}}"
-							],
-							"path": [
-								"Transaction",
-								"fund_account"
 							]
 						}
 					},
