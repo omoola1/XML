@@ -224,7 +224,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"transactionAmount\": 10000,\r\n  \"narration\": \"savings\",\r\n  \"depositor\": \"self\",\r\n  \"receiverAccount\": \"5786443687\",\r\n  \"receiverBank\": \"Wema Bank\"\r\n}",
+							"raw": "{\r\n  \"transactionAmount\": 50000,\r\n  \"narration\": \"savings\",\r\n  \"depositor\": \"self\",\r\n  \"receiverAccount\": \"5786443687\",\r\n  \"receiverBank\": \"Wema Bank\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
