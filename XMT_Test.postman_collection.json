@@ -210,7 +210,7 @@
 									"\r",
 									"pm.test(\"Fund Account\", function () {\r",
 									"   \r",
-									"    pm.expect(jsonData.receiverAccount).to.eql(\"5786443687\");\r",
+									"    pm.expect(jsonData.receiverAccount).to.eql(\"7784745261\");\r",
 									"});\r",
 									"\r",
 									""
@@ -224,7 +224,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"transactionAmount\": 50000,\r\n  \"narration\": \"savings\",\r\n  \"depositor\": \"self\",\r\n  \"receiverAccount\": \"5786443687\",\r\n  \"receiverBank\": \"Wema Bank\"\r\n}",
+							"raw": "{\r\n  \"transactionAmount\": 10000,\r\n  \"narration\": \"Savings\",\r\n  \"depositor\": \"self\",\r\n  \"receiverAccount\": \"7784745261\",\r\n  \"receiverBank\": \"Wema Bank\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -271,7 +271,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"senderAccount\": \"5786443687\",\r\n  \"accountPin\": \"2222\",\r\n  \"transfers\": [\r\n    {\r\n      \"transactionAmount\": 1000,\r\n      \"receiverAccount\": \"5438175257\",\r\n      \"bank\": \"Stanbic IBTC\"\r\n    },\r\n        {\r\n      \"transactionAmount\": 1000,\r\n      \"receiverAccount\": \"5241866312\",\r\n      \"bank\": \"Wema Bank\"\r\n    },\r\n    {\r\n      \"transactionAmount\": 1000,\r\n      \"receiverAccount\": \"4282826625\",\r\n      \"bank\": \"Wema Bank\"\r\n    },\r\n        {\r\n      \"transactionAmount\": 1000,\r\n      \"receiverAccount\": \"6746552312\",\r\n      \"bank\": \"Zenith Bank\"\r\n    },\r\n    {\r\n      \"transactionAmount\": 1000,\r\n      \"receiverAccount\": \"5752556663\",\r\n      \"bank\": \"UBA\"\r\n    },\r\n        {\r\n      \"transactionAmount\": 1000,\r\n      \"receiverAccount\": \"5127372474\",\r\n      \"bank\": \"Access Bank\"\r\n    },\r\n    {\r\n      \"transactionAmount\": 1000,\r\n      \"receiverAccount\": \"3426724816\",\r\n      \"bank\": \".Access Bank\"\r\n    },\r\n        {\r\n      \"transactionAmount\": 1000,\r\n      \"receiverAccount\": \"6878621372\",\r\n      \"bank\": \"Zenith Bank\"\r\n    },\r\n    {\r\n      \"transactionAmount\": 1000,\r\n      \"receiverAccount\": \"6368345373\",\r\n      \"bank\": \"FCMB\"\r\n    },\r\n     {\r\n      \"transactionAmount\": 1000,\r\n      \"receiverAccount\": \"1166577427\",\r\n      \"bank\": \"GTB\"\r\n    }\r\n    ]\r\n}",
+							"raw": "{\r\n  \"senderAccount\": \"7784745261\",\r\n  \"accountPin\": \"1234\",\r\n  \"transfers\": [\r\n    {\r\n      \"transactionAmount\": 1000,\r\n      \"receiverAccount\": \"7164518772\",\r\n      \"bank\": \"Zenith Bank\"\r\n    },\r\n        {\r\n      \"transactionAmount\": 1000,\r\n      \"receiverAccount\": \"4132568484\",\r\n      \"bank\": \"UBA\"\r\n    },\r\n    {\r\n      \"transactionAmount\": 1000,\r\n      \"receiverAccount\": \"4652285427\",\r\n      \"bank\": \"Access Bank\"\r\n    },\r\n        {\r\n      \"transactionAmount\": 1000,\r\n      \"receiverAccount\": \"7775271471\",\r\n      \"bank\": \"Access Bank\"\r\n    },\r\n    {\r\n      \"transactionAmount\": 1000,\r\n      \"receiverAccount\": \"3348316236\",\r\n      \"bank\": \"Zenith Bank\"\r\n    },\r\n        {\r\n      \"transactionAmount\": 1000,\r\n      \"receiverAccount\": \"3827285286\",\r\n      \"bank\": \"FCMB\"\r\n    },\r\n    {\r\n      \"transactionAmount\": 1000,\r\n      \"receiverAccount\": \"8586812334\",\r\n      \"bank\": \"GTB\"\r\n    },\r\n        {\r\n      \"transactionAmount\": 1000,\r\n      \"receiverAccount\": \"2366463851\",\r\n      \"bank\": \"Kuda\"\r\n    },\r\n    {\r\n      \"transactionAmount\": 1000,\r\n      \"receiverAccount\": \"1431543717\",\r\n      \"bank\": \"Sterling Bank\"\r\n    },\r\n     {\r\n      \"transactionAmount\": 1000,\r\n      \"receiverAccount\": \"7445718627\",\r\n      \"bank\": \"Stanbic IBTC\"\r\n    }\r\n    ]\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -318,7 +318,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"senderAccount\": \"5786443687\",\r\n  \"accountPin\": \"2222\",\r\n  \"groupName\": \"BIT\",\r\n  \"transfers\": [\r\n    {\r\n      \"transactionAmount\": 1000,\r\n      \"receiverAccount\": \"6368345373\",\r\n      \"bank\": \"FCMB\"\r\n    },\r\n      {\r\n      \"transactionAmount\": 1000,\r\n      \"receiverAccount\": \"1166577427\",\r\n      \"bank\": \"GTB\"\r\n    }\r\n  ]\r\n}",
+							"raw": "{\r\n  \"senderAccount\": \"7784745261\",\r\n  \"accountPin\": \"1234\",\r\n  \"groupName\": \"BIT\",\r\n  \"transfers\": [\r\n    {\r\n      \"transactionAmount\": 1000,\r\n      \"receiverAccount\": \"4652285427\",\r\n      \"bank\": \"Access Bank\"\r\n    },\r\n      {\r\n      \"transactionAmount\": 1000,\r\n      \"receiverAccount\": \"4132568484\",\r\n      \"bank\": \"UBA\"\r\n    }\r\n  ]\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -384,6 +384,100 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "Add New Beneficiaries",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									" const jsonData = pm.response.json();\r",
+									"\r",
+									"//Add New Beneficiary\"\r",
+									"\r",
+									"pm.test(\"Add New Beneficiary\", function () {\r",
+									"   \r",
+									"    pm.expect(jsonData.message).to.eql(\"Beneficiary account added successfully\");\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"userAccount\": \"7784745261\",\r\n  \"newBeneficiaries\": [\r\n    {\r\n      \"bank\": \"Zenith Bank\",\r\n      \"accountName\": \"Tosin Ayoola\",\r\n      \"accountNumber\": \"7164518772\"\r\n    }\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Transfer}}/Beneficiary/add_beneficiaries",
+							"host": [
+								"{{Transfer}}"
+							],
+							"path": [
+								"Beneficiary",
+								"add_beneficiaries"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remove_beneficiary",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									" const jsonData = pm.response.json();\r",
+									"\r",
+									"//Add New Beneficiary\"\r",
+									"\r",
+									"pm.test(\"Remove Added Beneficiary\", function () {\r",
+									"   \r",
+									"    pm.expect(jsonData.message).to.eql(\"Beneficiary account deleted successfully\");\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"userAccountNumber\": \"7784745261\",\r\n  \"beneficiaryAccountNumber\": \"7164518772\"\r\n}\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Transfer}}/Beneficiary/remove_beneficiary",
+							"host": [
+								"{{Transfer}}"
+							],
+							"path": [
+								"Beneficiary",
+								"remove_beneficiary"
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		}
@@ -411,7 +505,7 @@
 	"variable": [
 		{
 			"key": "baseUrl",
-			"value": "https://xmtapi.azurewebsites.net/customers"
+			"value": "https://xmtapi.azurewebsites.net/Customers"
 		},
 		{
 			"key": "Transfer",
